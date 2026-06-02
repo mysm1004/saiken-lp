@@ -157,6 +157,17 @@ section{padding:96px 0;position:relative}
 .bandseg .stop{display:inline-flex;align-items:center;gap:5px;margin-top:4px;font-family:var(--label);font-weight:700;font-size:10.5px;letter-spacing:.08em;color:#9a3b2f;text-transform:uppercase}
 .bandseg .go{display:inline-flex;align-items:center;gap:6px;margin-top:4px;font-family:var(--label);font-weight:700;font-size:10.5px;letter-spacing:.08em;color:var(--bronze);text-transform:uppercase}
 @media(max-width:820px){.range-band{grid-template-columns:1fr}.bandseg.servicer{grid-column:1;border-right:0;border-bottom:2px solid var(--ink)}.bandseg.lawyer{grid-column:1}}
+/* mobile: place servicer-stop marker directly under node 01 */
+.track-divider{display:none}
+@media(max-width:520px){
+  .range-band{display:none}
+  .track-divider{display:block;grid-column:1;border-bottom:1px solid var(--rule)}
+  .track-divider .td-servicer{background:rgba(26,22,15,.06);padding:15px 22px}
+  .track-divider .td-stop{display:block;font-family:var(--label);font-weight:700;font-size:10.5px;letter-spacing:.08em;color:#9a3b2f;margin-bottom:6px}
+  .track-divider .td-servicer b{font-family:var(--serif);font-weight:700;font-size:14.5px;color:var(--ink2)}
+  .track-divider .td-servicer small{display:block;font-size:11.5px;color:var(--mute);margin-top:5px;line-height:1.65}
+  .track-divider .td-lawyer{background:var(--bronzesoft);padding:13px 22px;font-family:var(--serif);font-weight:700;font-size:14px;color:var(--bronze);border-top:1px solid var(--rule)}
+}
 .reach-note{margin-top:20px;font-size:13px;color:var(--mute);line-height:1.85}
 .reach-note b{color:var(--ink);font-weight:700}
 
@@ -400,6 +411,10 @@ body.modal-open{overflow:hidden}
       <div class="range-head"><b>回収プロセスの全体像</b><span>Full Process Reach</span></div>
       <div class="track">
         <div class="node"><div class="nn">01</div><h5>督促</h5><small>架電・一般郵便・SMS・メール</small><span class="arrow"></span></div>
+        <div class="track-divider">
+          <div class="td-servicer"><span class="td-stop">▍ ここで停止</span><b>督促代行・サービサーはここまで</b><small>通知書・架電・メール等の督促が中心で、その先の法的手続きには進めません。</small></div>
+          <div class="td-lawyer">ここから先は、弁護士の領域 ↓</div>
+        </div>
         <div class="node"><div class="nn">02</div><h5>内容証明</h5><small>弁護士名での通知</small><span class="arrow"></span></div>
         <div class="node"><div class="nn">03</div><h5>調査</h5><small>住民票・弁護士法23条照会</small><span class="arrow"></span></div>
         <div class="node"><div class="nn">04</div><h5>支払督促・訴訟</h5><small>債務名義の取得</small><span class="arrow"></span></div>

@@ -316,6 +316,7 @@ body.modal-open{overflow:hidden}
 .form-actions button:hover{background:var(--bronze)}
 .form-actions button svg{width:16px;height:16px}
 .form-note{margin-top:14px;font-size:11.5px;color:var(--mute);line-height:1.75}
+.form-error{display:none;color:#9a3b2f;font-size:13px;font-weight:700;margin:0 0 14px;padding:11px 14px;background:rgba(154,59,47,.08);border:1px solid rgba(154,59,47,.32)}
 .result{display:none}
 .result.show{display:block}
 .result .badge-tier{display:inline-block;font-family:var(--label);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:7px 15px;margin-bottom:18px}
@@ -642,6 +643,7 @@ body.modal-open{overflow:hidden}
         <div class="field"><label>電話番号<span class="req">必須</span></label><input type="tel" name="tel" required></div>
         <div class="field"><label>メールアドレス<span class="req">必須</span></label><input type="email" name="email" required></div>
         <div class="field"><label>備考<span class="opt">任意</span></label><textarea name="note" placeholder="ご相談内容など"></textarea></div>
+        <p class="form-error" id="contact-error">未入力の必須項目があります。ご確認ください。</p>
         <div class="form-actions"><button type="submit">この内容で問い合わせる<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
         <p class="form-note">※ 送信ボタンを押すと、ご入力内容を添えたメール作成画面が開きます。</p>
       </form>
@@ -675,6 +677,7 @@ body.modal-open{overflow:hidden}
         <div class="field"><label><span class="qn">Q5</span>現状の督促方法<span class="req">必須</span></label><input type="text" name="q5" required placeholder="例：弁護士に依頼している／自社で3か月督促している など"></div>
         <div class="field"><label><span class="qn">Q6</span>現状の督促期間<span class="req">必須</span></label><select name="q6" required><option value="" disabled selected>選択してください</option><option value="1">1か月程度</option><option value="2">1か月〜半年程度</option><option value="3">半年以上</option></select></div>
         <div class="field"><label><span class="qn">Q7</span>未収の発生件数（月あたり）<span class="req">必須</span></label><select name="q7" required><option value="" disabled selected>選択してください</option><option value="1">0〜5件</option><option value="2">6〜50件</option><option value="3">51〜300件</option><option value="4">301件以上</option></select></div>
+        <p class="form-error" id="diag-error">未入力の項目があります。すべての項目をご入力ください。</p>
         <div class="form-actions"><button type="submit">診断する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
         <p class="form-note">※ 本診断は簡易的なものであり、回収可能性・回収額を保証するものではありません。</p>
       </form>
@@ -701,17 +704,18 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   var q4=document.querySelector('#form-diagnosis select[name=q4]');
   if(q4){q4.addEventListener('change',function(){document.getElementById('q4-other').classList.toggle('hidden',q4.value!=='4');});}
 
-  function validate(form){var ok=true;form.querySelectorAll('[required]').forEach(function(el){if(!el.value){el.style.borderColor='#9a3b2f';ok=false;}else{el.style.borderColor='';}});return ok;}
+  function firstInvalid(form){var bad=null;form.querySelectorAll('[required]').forEach(function(el){if(!el.value){el.style.borderColor='#9a3b2f';if(!bad)bad=el;}else{el.style.borderColor='';}});return bad;}
+  function flagInvalid(bad,errId){var err=document.getElementById(errId);if(err)err.style.display='block';try{bad.focus({preventScroll:true});}catch(e){bad.focus();}bad.scrollIntoView({block:'center'});}
   function mailto(subject,lines){return 'mailto:info@tslaw.or.jp?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));}
 
   var fc=document.getElementById('form-contact');
-  if(fc){fc.addEventListener('submit',function(e){e.preventDefault();if(!validate(fc))return;var d=new FormData(fc);var lines=['【お問い合わせ】','貴社名：'+d.get('company'),'ご担当者様名：'+d.get('person'),'電話番号：'+d.get('tel'),'メールアドレス：'+d.get('email'),'備考：'+(d.get('note')||'-')];window.location.href=mailto('債権回収サービスに関するお問い合わせ',lines);});}
+  if(fc){fc.addEventListener('submit',function(e){e.preventDefault();var bad=firstInvalid(fc);if(bad){flagInvalid(bad,'contact-error');return;}var ce=document.getElementById('contact-error');if(ce)ce.style.display='none';var d=new FormData(fc);var lines=['【お問い合わせ】','貴社名：'+d.get('company'),'ご担当者様名：'+d.get('person'),'電話番号：'+d.get('tel'),'メールアドレス：'+d.get('email'),'備考：'+(d.get('note')||'-')];window.location.href=mailto('債権回収サービスに関するお問い合わせ',lines);});}
 
   var fd=document.getElementById('form-diagnosis');
   if(fd){
     var L={q2:{'1':'5,000円未満','2':'5,001円〜10万円未満','3':'10万円以上'},q4:{'1':'すべて把握','2':'2つ把握','3':'1つ把握','4':'その他'},q6:{'1':'1か月程度','2':'1か月〜半年程度','3':'半年以上'},q7:{'1':'0〜5件','2':'6〜50件','3':'51〜300件','4':'301件以上'}};
     fd.addEventListener('submit',function(e){
-      e.preventDefault();if(!validate(fd))return;
+      e.preventDefault();var bad=firstInvalid(fd);if(bad){flagInvalid(bad,'diag-error');return;}var de=document.getElementById('diag-error');if(de)de.style.display='none';
       var d=new FormData(fd);var q4v=d.get('q4'),q7v=d.get('q7');
       var tier,label,msg;
       var q7hi=(q7v==='2'||q7v==='3'||q7v==='4');

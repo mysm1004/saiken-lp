@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>債権回収｜いまの回収率は、まだ上げられる。｜弁護士法人 東京新橋法律事務所</title>
+<meta name="description" content="継続的に発生する未収金にお困りの事業会社様へ。リクルート出身の代表が事業を理解し、9名の弁護士が各社の状況に合わせた回収方法を一件ずつ設計します。成功報酬制の債権回収・着手金0円。事業会社専門（金融業を除く）。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f4f0e7; --paper2:#efe9dd; --white:#fbf8f1; --ink:#1a160f; --ink2:#3a342a; --mute:#6f6555;
+  --rule:rgba(26,22,15,.16); --rule2:rgba(26,22,15,.30); --ruled:rgba(255,255,255,.16);
+  --bronze:#8f6532; --bronze2:#b08545; --gold:#c19a5b; --bronzesoft:rgba(143,101,50,.10);
+  --maxw:1180px;
+  --serif:"Noto Serif JP",serif; --sans:"Noto Sans JP",system-ui,sans-serif;
+  --label:"Inter",sans-serif; --display:"Cormorant Garamond","Noto Serif JP",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:17px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.98;letter-spacing:.014em;overflow-x:hidden}
+.serif{font-family:var(--serif)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 36px}
+@media(max-width:680px){.wrap{padding:0 22px}}
+.label{font-family:var(--label);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:11.5px;color:var(--bronze)}
+.nobr{white-space:nowrap}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(251,248,241,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{height:32px;width:auto;filter:brightness(1.08) contrast(1.04);mix-blend-mode:multiply}
+.brand .bt{font-weight:700;font-size:14px;letter-spacing:.02em}
+.brand .bs{font-family:var(--sans);font-size:11.5px;letter-spacing:.04em;color:var(--bronze)}
+.hnav{display:flex;align-items:center;gap:22px}
+.hlink{font-weight:700;font-size:13.5px;color:var(--ink2);letter-spacing:.02em;transition:color .2s;white-space:nowrap}
+.hlink:hover{color:var(--bronze)}
+.hcta{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:var(--white);font-weight:700;font-size:13.5px;letter-spacing:.03em;padding:12px 24px;transition:background .2s;white-space:nowrap}
+.hcta:hover{background:var(--bronze)}
+@media(max-width:680px){.brand .bs{display:none}.hnav{gap:14px}.hlink{display:none}.hcta{padding:10px 16px;font-size:12.5px}}
+
+/* hero */
+.hero{padding:46px 0 0;border-bottom:1px solid var(--rule)}
+.issue{display:flex;align-items:center;gap:18px;font-family:var(--label);font-size:11px;letter-spacing:.2em;color:var(--mute);text-transform:uppercase;margin-bottom:42px}
+.issue:before,.issue:after{content:"";height:1px;background:var(--rule2);flex:1}
+.hero-grid{display:grid;grid-template-columns:1.14fr .86fr;gap:60px;align-items:center;padding-bottom:64px}
+@media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(33px,4.7vw,60px);line-height:1.4;letter-spacing:.025em;margin:0;color:var(--ink)}
+.hero h1 .em{color:var(--bronze);position:relative;display:inline-block;animation:emIn .9s cubic-bezier(.16,1,.3,1) both}
+.hero h1 .em::after{content:"";position:absolute;left:0;bottom:-.02em;height:3px;width:100%;background:var(--bronze);opacity:.5;transform:scaleX(0);transform-origin:left;animation:emLine 1.1s cubic-bezier(.16,1,.3,1) .55s forwards}
+@keyframes emIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes emLine{to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.hero h1 .em{animation:none}.hero h1 .em::after{animation:none;transform:scaleX(1)}}
+.hero .lead{margin:32px 0 0;font-family:var(--serif);font-weight:500;font-size:clamp(15px,1.45vw,17.5px);line-height:2.1;color:var(--ink2);max-width:560px}
+.hero .lead:before{content:"";display:block;width:34px;height:1px;background:var(--bronze);margin-bottom:24px}
+.badges{display:inline-flex;flex-wrap:wrap;margin-top:34px;border:1px solid var(--rule2)}
+.badges .b{padding:12px 22px;font-weight:700;font-size:13.5px;border-right:1px solid var(--rule)}
+.badges .b:last-child{border-right:0}
+@media(max-width:520px){.badges{display:flex;width:100%}.badges .b{flex:1;padding:11px 6px;font-size:12px;text-align:center}}
+.hero-cta{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:36px}
+.btn{display:inline-flex;align-items:center;gap:11px;background:var(--ink);color:var(--white);font-weight:700;font-size:15px;letter-spacing:.02em;padding:18px 34px;transition:background .2s,transform .15s}
+.btn:hover{background:var(--bronze);transform:translateY(-1px)}
+.btn svg{width:16px;height:16px}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--ink);font-weight:700;font-size:15px;letter-spacing:.02em;padding:18px 30px;border:1px solid var(--rule2);transition:.2s}
+.btn-outline:hover{border-color:var(--bronze);color:var(--bronze)}
+.btn-outline svg{width:16px;height:16px}
+.link-quiet{font-weight:700;font-size:14.5px;border-bottom:1.5px solid var(--bronze);padding-bottom:3px}
+.portrait{position:relative}
+.portrait .frame{position:relative;overflow:hidden;aspect-ratio:4/4.7;border:1px solid var(--rule2);background:var(--white)}
+.portrait .frame img{width:100%;height:100%;object-fit:cover;object-position:center 14%;filter:grayscale(.12) contrast(1.02)}
+.portrait .plate{position:absolute;left:22px;bottom:22px;background:var(--white);border:1px solid var(--rule2);padding:14px 22px;box-shadow:0 14px 32px rgba(26,22,15,.16)}
+.portrait .plate b{display:block;font-family:var(--serif);font-weight:700;font-size:17px;letter-spacing:.04em;line-height:1.4}
+.portrait .plate span{display:block;margin-top:4px;font-family:var(--sans);font-size:11.5px;letter-spacing:.02em;color:var(--mute);line-height:1.4}
+.portrait .vtag{position:absolute;right:-14px;top:28px;writing-mode:vertical-rl;font-family:var(--serif);font-weight:700;font-size:13px;letter-spacing:.24em;color:var(--bronze);background:var(--paper);border:1px solid var(--rule2);padding:16px 9px}
+
+/* stat strip */
+.stats{border-top:1px solid var(--rule);background:var(--white)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+@media(max-width:680px){.stats-grid{grid-template-columns:1fr}}
+.stat{padding:30px 36px;border-right:1px solid var(--rule);display:flex;align-items:baseline;gap:18px}
+.stat:last-child{border-right:0}
+@media(max-width:680px){.stat{border-right:0;border-bottom:1px solid var(--rule)}.stat:last-child{border-bottom:0}}
+.stat .v{font-family:var(--label);font-weight:800;font-size:34px;line-height:1;color:var(--bronze);letter-spacing:-.01em;white-space:nowrap}
+.stat .v small{font-size:.5em;font-weight:700;color:var(--ink2);margin-left:3px}
+.stat .t{font-size:13px;color:var(--mute);line-height:1.6}
+.stat .t b{display:block;font-family:var(--serif);font-weight:700;font-size:15px;color:var(--ink);margin-bottom:2px}
+
+section{padding:96px 0;position:relative}
+.sec-head{margin-bottom:48px}
+.sec-head.cen{text-align:center}
+.sec-head .top{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.sec-head.cen .top{justify-content:center}
+.sec-head .num{font-family:var(--display);font-weight:500;font-size:30px;color:var(--bronze);line-height:1}
+.sec-head h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.2vw,38px);line-height:1.5;letter-spacing:.02em;margin:0}
+.sec-head h2 em{font-style:normal;color:var(--bronze)}
+.sec-head .lead{margin-top:16px;color:var(--ink2);font-size:15.5px;max-width:700px}
+.sec-head.cen .lead{margin-left:auto;margin-right:auto}
+.alt{background:var(--white);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+
+/* stance dark */
+.stance{background:var(--ink);color:var(--white);padding:88px 0;position:relative}
+.stance:before{content:"“";position:absolute;left:30px;top:-6px;font-family:var(--display);font-size:200px;color:rgba(176,133,69,.18);line-height:1;pointer-events:none}
+.stance .label{color:var(--gold)}
+.stance h3{font-family:var(--serif);font-weight:600;font-size:clamp(24px,3.4vw,42px);line-height:1.62;letter-spacing:.02em;margin:22px 0 30px;max-width:960px;position:relative}
+.stance h3 em{font-style:normal;color:var(--gold)}
+.stance p{color:rgba(251,248,241,.82);font-size:clamp(15px,1.5vw,17px);line-height:2.1;max-width:800px;margin:0 0 16px;position:relative}
+.stance .excl{display:inline-flex;align-items:center;gap:14px;margin-top:24px;padding:16px 24px;border:1px solid rgba(255,255,255,.2);position:relative}
+.stance .excl b{color:var(--gold)}
+.stance .excl .sep{width:1px;height:18px;background:rgba(255,255,255,.24)}
+
+/* problems */
+.prob-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--rule2)}
+@media(max-width:860px){.prob-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.prob-grid{grid-template-columns:1fr}}
+.prob{padding:30px 26px;border-right:1px solid var(--rule)}
+.prob:last-child{border-right:0}
+@media(max-width:860px){.prob{border-bottom:1px solid var(--rule)}.prob:nth-child(2n){border-right:0}}
+@media(max-width:520px){.prob{border-right:0}}
+.prob .n{font-family:var(--label);font-weight:800;font-size:13px;color:var(--bronze);letter-spacing:.06em}
+.prob h4{font-family:var(--serif);font-weight:700;font-size:16.5px;margin:14px 0 9px;line-height:1.5}
+.prob p{margin:0;color:var(--mute);font-size:14px;line-height:1.82}
+
+/* REACH timeline (C) */
+.range{margin-top:18px;border:1px solid var(--ink)}
+.range-head{display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:var(--white);padding:16px 26px}
+.range-head b{font-family:var(--serif);font-weight:600;font-size:15px;letter-spacing:.04em}
+.range-head span{font-family:var(--label);font-size:10.5px;letter-spacing:.14em;color:rgba(255,255,255,.65);text-transform:uppercase}
+.track{display:grid;grid-template-columns:repeat(6,1fr);background:var(--white)}
+.node{padding:30px 18px 26px;border-right:1px solid var(--rule);position:relative}
+.node:last-child{border-right:0}
+.node .nn{font-family:var(--label);font-weight:800;font-size:13px;color:var(--bronze);letter-spacing:.06em}
+.node h5{font-family:var(--serif);font-weight:700;font-size:15.5px;margin:12px 0 6px;line-height:1.5}
+.node small{color:var(--mute);font-size:12px;line-height:1.6;display:block}
+.node .arrow{position:absolute;right:-7px;top:38px;width:13px;height:13px;border-top:1px solid var(--bronze);border-right:1px solid var(--bronze);transform:rotate(45deg);background:var(--white);z-index:2}
+.node:last-child .arrow{display:none}
+@media(max-width:820px){.track{grid-template-columns:1fr 1fr 1fr}.node:nth-child(3) .arrow,.node:nth-child(6) .arrow{display:none}}
+@media(max-width:520px){.track{grid-template-columns:1fr}.node{border-right:0;border-bottom:1px solid var(--rule)}.node:last-child{border-bottom:0}.node .arrow{display:none}}
+.zones{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+@media(max-width:760px){.zones{grid-template-columns:1fr}}
+.zone{padding:24px 26px;font-size:14px;line-height:1.85;background:var(--white)}
+.zone.stop{color:var(--mute);border-right:1px solid var(--rule)}
+@media(max-width:760px){.zone.stop{border-right:0;border-bottom:1px solid var(--rule)}}
+.zone.full{background:var(--bronzesoft)}
+.zone b{display:block;font-family:var(--serif);font-weight:700;font-size:15px;margin-bottom:6px;color:var(--ink)}
+.zone.full b{color:var(--bronze)}
+/* proportional range band: servicer stops at node 01 */
+.range-band{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--ink)}
+.bandseg{padding:20px 22px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.bandseg.servicer{grid-column:1 / 2;background:rgba(26,22,15,.05);border-right:2px solid var(--ink)}
+.bandseg.lawyer{grid-column:2 / 7;background:var(--bronzesoft)}
+.bandseg .bl{font-family:var(--serif);font-weight:700;font-size:14.5px;line-height:1.5}
+.bandseg.servicer .bl{color:var(--mute)}
+.bandseg.lawyer .bl{color:var(--bronze)}
+.bandseg .bd{font-size:12px;color:var(--mute);line-height:1.65}
+.bandseg .stop{display:inline-flex;align-items:center;gap:5px;margin-top:4px;font-family:var(--label);font-weight:700;font-size:10.5px;letter-spacing:.08em;color:#9a3b2f;text-transform:uppercase}
+.bandseg .go{display:inline-flex;align-items:center;gap:6px;margin-top:4px;font-family:var(--label);font-weight:700;font-size:10.5px;letter-spacing:.08em;color:var(--bronze);text-transform:uppercase}
+@media(max-width:820px){.range-band{grid-template-columns:1fr}.bandseg.servicer{grid-column:1;border-right:0;border-bottom:2px solid var(--ink)}.bandseg.lawyer{grid-column:1}}
+.reach-note{margin-top:20px;font-size:13px;color:var(--mute);line-height:1.85}
+.reach-note b{color:var(--ink);font-weight:700}
+
+/* design essays (D) */
+.essays{border-top:1px solid var(--rule2)}
+.essay{display:grid;grid-template-columns:120px 1fr;gap:44px;padding:44px 0;border-bottom:1px solid var(--rule);align-items:start}
+@media(max-width:760px){.essay{grid-template-columns:1fr;gap:14px;padding:34px 0}}
+.essay .en{font-family:var(--display);font-weight:500;font-size:62px;color:var(--bronze);line-height:.9}
+.essay .et{font-family:var(--label);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze);display:block;margin-bottom:12px}
+.essay h4{font-family:var(--serif);font-weight:700;font-size:clamp(18px,2.2vw,25px);line-height:1.6;margin:0 0 14px}
+.essay p{margin:0;color:var(--ink2);font-size:15px;line-height:2;max-width:700px}
+
+/* method */
+.method{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--rule2);margin-top:6px}
+@media(max-width:760px){.method{grid-template-columns:1fr}}
+.m{padding:38px 34px;border-right:1px solid var(--rule)}
+.m:last-child{border-right:0}
+@media(max-width:760px){.m{border-right:0;border-bottom:1px solid var(--rule)}.m:last-child{border-bottom:0}}
+.m .mn{font-family:var(--label);font-weight:700;font-size:11.5px;letter-spacing:.14em;color:var(--bronze);text-transform:uppercase}
+.m h4{font-family:var(--serif);font-weight:700;font-size:19px;margin:14px 0 12px;line-height:1.55}
+.m p{margin:0;color:var(--mute);font-size:14.5px;line-height:1.9}
+
+/* cases */
+.cases{border-top:2px solid var(--ink)}
+.case{display:grid;grid-template-columns:96px 1fr 270px;gap:40px;padding:44px 0;border-bottom:1px solid var(--rule);align-items:center}
+@media(max-width:900px){.case{grid-template-columns:1fr;gap:18px;padding:34px 0}}
+.case .cno{font-family:var(--display);font-weight:500;font-size:58px;color:var(--bronze);line-height:1}
+.case .cbody .sector{font-family:var(--label);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--bronze)}
+.case .cbody h4{font-family:var(--serif);font-weight:700;font-size:clamp(18px,2vw,23px);line-height:1.6;margin:10px 0 14px}
+.case .cbody dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:7px 18px}
+.case .cbody dt{font-family:var(--label);font-weight:700;font-size:10px;letter-spacing:.1em;color:var(--mute);text-transform:uppercase;padding-top:6px}
+.case .cbody dd{margin:0;font-size:14px;color:var(--ink2);line-height:1.85}
+.case .cmetric{text-align:right;border-left:1px solid var(--rule);padding-left:38px}
+@media(max-width:900px){.case .cmetric{text-align:left;border-left:0;border-top:1px solid var(--rule);padding-left:0;padding-top:18px}}
+.case .cmetric .big{font-family:var(--label);font-weight:800;font-size:clamp(38px,4.2vw,52px);line-height:1.05;color:var(--ink);letter-spacing:-.01em}
+.case .cmetric .big em{font-style:normal;color:var(--bronze)}
+.case .cmetric .big small{font-size:.5em;font-weight:700}
+.case .cmetric .cap{font-size:13px;color:var(--mute);margin-top:6px}
+.cases-note{font-size:12px;color:var(--mute);margin-top:24px;line-height:1.8}
+
+/* pricing */
+.price-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink)}
+@media(max-width:780px){.price-grid{grid-template-columns:1fr}}
+.price-main{padding:48px 44px;border-right:1px solid var(--ink);background:var(--ink);color:var(--white)}
+@media(max-width:780px){.price-main{border-right:0;border-bottom:1px solid var(--ink)}}
+.price-main .label{color:var(--gold)}
+.price-main .pv{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3vw,34px);line-height:1.5;margin:18px 0 26px}
+.price-main ul{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.price-main li{display:grid;grid-template-columns:24px 1fr;gap:12px;font-size:15px;color:rgba(251,248,241,.86);line-height:1.85}
+.price-main li .ck{color:var(--gold);font-weight:800;font-family:var(--label)}
+.price-note{padding:48px 44px;background:var(--white)}
+.price-note h4{font-family:var(--serif);font-weight:700;font-size:18px;margin:0 0 18px}
+.price-note p{margin:0 0 14px;font-size:14px;color:var(--mute);line-height:1.95}
+
+/* letter */
+.letter{background:var(--white);border:1px solid var(--rule2);padding:clamp(30px,5vw,64px)}
+.letter-grid{display:grid;grid-template-columns:1fr 250px;gap:50px;align-items:end}
+@media(max-width:780px){.letter-grid{grid-template-columns:1fr;gap:30px}}
+.letter blockquote{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(15px,1.6vw,18px);line-height:2.25;color:var(--ink2)}
+.letter .ll{font-weight:700;color:var(--ink);font-size:1.18em;display:block;margin-bottom:24px;line-height:1.7}
+.letter .ll:before{content:"";display:block;width:42px;height:2px;background:var(--bronze);margin-bottom:22px}
+.letter .sign{margin-top:28px;font-size:13.5px;color:var(--mute)}
+.letter .sign b{font-family:var(--serif);font-size:20px;color:var(--ink);display:inline-block;margin-left:10px;font-weight:700}
+.letter .pf{overflow:hidden;border:1px solid var(--rule2);aspect-ratio:3/3.7}
+.letter .pf img{width:100%;height:100%;object-fit:cover;object-position:center 14%;filter:grayscale(.1)}
+
+/* final */
+.final{background:var(--ink);color:var(--white);padding:92px 0;text-align:center;position:relative}
+.final .label{color:var(--gold)}
+.final h2{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3.6vw,44px);line-height:1.55;margin:20px auto 18px;max-width:840px}
+.final h2 em{font-style:normal;color:var(--gold)}
+.final p{color:rgba(251,248,241,.82);max-width:580px;margin:0 auto 34px;font-size:15.5px}
+.final .btn{background:var(--white);color:var(--ink)}
+.final .btn:hover{background:var(--gold);color:var(--ink)}
+.final .phone{margin-top:30px;font-size:14px;color:rgba(251,248,241,.7)}
+.final .phone b{font-family:var(--label);font-weight:800;font-size:22px;color:var(--white);letter-spacing:.02em}
+/* dual CTA */
+.cta-cards{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;max-width:880px;margin:8px auto 0;text-align:left}
+@media(max-width:680px){.cta-cards{grid-template-columns:1fr}}
+.cta-card{background:var(--white);color:var(--ink);padding:34px 32px;display:flex;flex-direction:column}
+.cta-card.primary{border:2px solid var(--gold);box-shadow:0 20px 50px rgba(0,0,0,.28)}
+.cta-card.sub{background:transparent;border:1px solid rgba(255,255,255,.22);color:var(--white)}
+.cta-card .cc-tag{align-self:flex-start;font-family:var(--label);font-weight:700;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;margin-bottom:18px}
+.cta-card.primary .cc-tag{color:var(--bronze);border:1px solid var(--bronze)}
+.cta-card.sub .cc-tag{color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.28)}
+.cta-card h3{font-family:var(--serif);font-weight:700;font-size:22px;margin:0 0 12px;line-height:1.5}
+.cta-card.sub h3{color:var(--white)}
+.cta-card p{font-size:14px;line-height:1.9;margin:0 0 24px;flex:1}
+.cta-card.primary p{color:var(--mute)}
+.cta-card.sub p{color:rgba(251,248,241,.72)}
+.cta-card .act{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:18px 24px;font-weight:700;font-size:15px;letter-spacing:.02em;transition:.2s}
+.cta-card .act svg{width:16px;height:16px}
+.cta-card.primary .act{background:var(--ink);color:var(--white)}
+.cta-card.primary .act:hover{background:var(--bronze)}
+.cta-card.sub .act{background:transparent;border:1px solid rgba(255,255,255,.4);color:var(--white)}
+.cta-card.sub .act:hover{background:var(--white);color:var(--ink)}
+
+footer{background:var(--ink);color:rgba(251,248,241,.62);padding:54px 0 90px;font-size:13px}
+.foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:24px}
+.foot-top .bt{font-family:var(--serif);font-size:17px;color:var(--white);font-weight:700;margin-bottom:6px}
+.disc{font-size:11.5px;line-height:1.95;color:rgba(251,248,241,.5)}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+.mcta{display:none}
+@media(max-width:680px){
+  .mcta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;border-top:1px solid var(--rule2)}
+  .mcta a{flex:1;text-align:center;padding:15px;font-weight:700;font-size:14.5px}
+  .mcta .m1{background:var(--ink);color:var(--white)}
+  .mcta .m2{background:var(--white);color:var(--ink);border-left:1px solid var(--rule2)}
+  section{padding:62px 0}
+  body{padding-bottom:54px}
+}
+
+/* ===== modal / forms ===== */
+body.modal-open{overflow:hidden}
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(20,17,12,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:38px 16px;overflow-y:auto}
+.modal-overlay.open{display:flex}
+.modal{background:var(--paper);width:100%;max-width:600px;border:1px solid var(--rule2);box-shadow:0 40px 90px rgba(20,17,12,.45);position:relative;margin:auto}
+.modal-head{padding:30px 34px 22px;border-bottom:1px solid var(--rule)}
+.modal-head .label{display:block;margin-bottom:10px}
+.modal-head h3{font-family:var(--serif);font-weight:700;font-size:clamp(20px,3vw,26px);margin:0;line-height:1.4}
+.modal-head p{margin:12px 0 0;font-size:13.5px;color:var(--mute);line-height:1.85}
+.modal-close{position:absolute;top:16px;right:16px;width:38px;height:38px;border:1px solid var(--rule2);background:var(--white);display:grid;place-items:center;cursor:pointer;transition:.2s;color:var(--ink)}
+.modal-close:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.modal-close svg{width:18px;height:18px}
+.modal-body{padding:26px 34px 34px}
+@media(max-width:520px){.modal-head{padding:26px 22px 20px}.modal-body{padding:22px 22px 28px}}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:700;font-size:13.5px;margin-bottom:7px;color:var(--ink2);line-height:1.6}
+.field label .req{color:#9a3b2f;font-size:11px;margin-left:8px;font-weight:700}
+#form-diagnosis .field label .req{display:none}
+.field label .opt{color:var(--mute);font-size:11px;margin-left:8px;font-weight:500}
+.field label .qn{font-family:var(--label);font-weight:800;color:var(--bronze);margin-right:8px}
+.field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--rule2);background:var(--white);font-family:var(--sans);font-size:14.5px;color:var(--ink);border-radius:0;transition:border-color .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--bronze)}
+.field textarea{resize:vertical;min-height:74px;line-height:1.7}
+.field input::placeholder,.field textarea::placeholder{color:#a89e8c}
+.field select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238f6532' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;cursor:pointer}
+.field.hidden{display:none}
+.section-label{font-family:var(--label);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--bronze);margin:24px 0 16px;padding-bottom:9px;border-bottom:1px solid var(--rule)}
+.section-label:first-child{margin-top:4px}
+.form-actions{margin-top:24px}
+.form-actions button{width:100%;padding:18px;background:var(--ink);color:var(--white);font-family:var(--sans);font-weight:700;font-size:15.5px;border:none;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;justify-content:center;gap:10px}
+.form-actions button:hover{background:var(--bronze)}
+.form-actions button svg{width:16px;height:16px}
+.form-note{margin-top:14px;font-size:11.5px;color:var(--mute);line-height:1.75}
+.result{display:none}
+.result.show{display:block}
+.result .badge-tier{display:inline-block;font-family:var(--label);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:7px 15px;margin-bottom:18px}
+.result.high .badge-tier{background:var(--bronze);color:#fff}
+.result.mid .badge-tier{background:var(--bronzesoft);color:var(--bronze);border:1px solid var(--bronze)}
+.result.low .badge-tier{background:rgba(26,22,15,.06);color:var(--mute);border:1px solid var(--rule2)}
+.result h4{font-family:var(--serif);font-weight:700;font-size:clamp(19px,2.6vw,24px);line-height:1.55;margin:0 0 14px}
+.result p{font-size:14px;color:var(--ink2);line-height:1.95;margin:0 0 24px}
+.result .phone-line{font-size:13px;color:var(--mute);margin-top:18px;text-align:center}
+.result .phone-line b{font-family:var(--label);font-weight:800;font-size:18px;color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <img src="img/logo.png" alt="弁護士法人 東京新橋法律事務所" />
+      <div><div class="bt">弁護士法人 東京新橋法律事務所</div><div class="bs">成功報酬制の債権回収</div></div>
+    </div>
+    <div class="hnav">
+      <a href="#contact" class="hlink" data-modal="contact">お問い合わせ</a>
+      <a href="#contact" class="hcta" data-modal="diagnosis">改善可能性を診断</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="issue">債権回収 — 事業会社専門 &nbsp;/&nbsp; 金融業を除く</div>
+    <div class="hero-grid">
+      <div>
+        <h1>いまの回収率は、<br><span class="em">まだ上げられる。</span></h1>
+        <p class="lead">継続的に発生する未収金にお困りの事業会社様へ。リクルート出身の代表弁護士が貴社の事業を理解し、9名の弁護士が各社の状況に合わせた回収方法を、一件ずつ設計します。完全成功報酬。</p>
+        <div class="badges">
+          <div class="b">完全成功報酬</div>
+          <div class="b">着手金 0円</div>
+          <div class="b">事業会社専門</div>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn" data-modal="diagnosis">回収率の改善可能性を無料診断
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#contact" class="btn-outline" data-modal="contact">お問い合わせ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="portrait">
+        <div class="frame"><img src="img/maeda.jpg" alt="代表弁護士 前田祥夢" /></div>
+        <div class="plate"><b>前田 祥夢</b><span>代表弁護士 ／ リクルート出身</span></div>
+      </div>
+    </div>
+  </div>
+  <!-- stat strip -->
+  <div class="stats">
+    <div class="wrap stats-grid">
+      <div class="stat"><div class="v">9<small>名</small></div><div class="t"><b>弁護士が在籍</b>通知から差押えまで法的手続きを一気通貫</div></div>
+      <div class="stat"><div class="v">数万件<small>規模 / 月</small></div><div class="t"><b>継続債権を受託</b>毎月発生する未収金の運用に習熟</div></div>
+      <div class="stat"><div class="v">5<small>業種+</small></div><div class="t"><b>業界横断の実績</b>通信・不動産・サブスク・レンタル・決済</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STANCE -->
+<section class="stance">
+  <div class="wrap">
+    <span class="label reveal">Our Stance</span>
+    <h3 class="reveal">数万件規模を受託しながら、<em>なお、一件ずつ設計する。</em></h3>
+    <p class="reveal">私たちは、金融業界の回収はお引き受けしていません。月に何十万件もの未収金を機械的に処理する——それは私たちのやり方ではないからです。リクルート出身の代表弁護士がクライアント企業様の事業内容とお悩みを深く理解し、担当弁護士がその債権に最適な法的構成や回収ポートフォリオを、一件ずつ悩み抜いて設計する。</p>
+    <p class="reveal">継続的に発生する未収金を毎月数万件規模でお預かりしながらも、画一処理に流さない。だからこそ、<b style="color:var(--gold)">金融業を除く事業会社様に専門特化</b>しています。</p>
+    <div class="excl reveal"><span>対象 — <b>事業会社様</b></span><span class="sep"></span><span style="color:rgba(255,255,255,.7)">対象外 — 銀行・消費者金融・ファクタリング等の金融業</span></div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="top"><span class="num">01</span><span class="label">Such Issues?</span></div><h2>督促はしている。それでも、回収率が伸びない。</h2><p class="lead">毎月積み上がる未収金。委託先を変えても結果が変わらない——その停滞は、回収の<span class="nobr">「設計」で動かせます。</span></p></div>
+    <div class="prob-grid">
+      <div class="prob reveal"><div class="n">01</div><h4>回収率が頭打ち</h4><p>自社督促や既存の委託先でやり切っているのに、回収率が一定のラインから上がらない。</p></div>
+      <div class="prob reveal"><div class="n">02</div><h4>未収金が積み上がる</h4><p>継続的に発生する未収金に督促リソースが追いつかず、時間とともに回収難度が上がる。</p></div>
+      <div class="prob reveal"><div class="n">03</div><h4>督促止まりで進めない</h4><p>督促代行やサービサーでは、支払督促・少額訴訟・差押えといった法的手続きに進めない。</p></div>
+      <div class="prob reveal"><div class="n">04</div><h4>事業を理解されない</h4><p>画一的な処理で、業界特有の契約形態や事情に合った回収設計になっていない。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REACH -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head cen reveal"><div class="top"><span class="num">02</span><span class="label">Our Reach</span></div><h2>督促代行は、ここで止まる。<em>弁護士は、その先へ。</em></h2><p class="lead">手強い相手ほど、督促だけでは動きません。9名の弁護士が、法的手続きまで<span class="nobr">一気通貫で踏み込みます。</span></p></div>
+    <div class="range reveal">
+      <div class="range-head"><b>回収プロセスの全体像</b><span>Full Process Reach</span></div>
+      <div class="track">
+        <div class="node"><div class="nn">01</div><h5>督促</h5><small>架電・一般郵便・SMS・メール</small><span class="arrow"></span></div>
+        <div class="node"><div class="nn">02</div><h5>内容証明</h5><small>弁護士名での通知</small><span class="arrow"></span></div>
+        <div class="node"><div class="nn">03</div><h5>調査</h5><small>住民票・弁護士法23条照会</small><span class="arrow"></span></div>
+        <div class="node"><div class="nn">04</div><h5>支払督促・訴訟</h5><small>債務名義の取得</small><span class="arrow"></span></div>
+        <div class="node"><div class="nn">05</div><h5>強制執行</h5><small>財産の差押え</small><span class="arrow"></span></div>
+        <div class="node"><div class="nn">06</div><h5>回収完了</h5><small>現実の入金まで</small></div>
+      </div>
+      <div class="range-band">
+        <div class="bandseg servicer">
+          <span class="bl">督促代行・サービサー</span>
+          <span class="bd">01 の督促まで</span>
+          <span class="stop">▍ここで停止</span>
+        </div>
+        <div class="bandseg lawyer">
+          <span class="bl">弁護士法人だから、その先へ</span>
+          <span class="bd">02 内容証明 ・ 03 調査（住民票／弁護士法23条照会）・ 04 支払督促・訴訟 ・ 05 差押え ・ 06 回収完了 まで一気通貫</span>
+          <span class="go">弁護士にしかできない手続きで回収しきる →</span>
+        </div>
+      </div>
+    </div>
+    <p class="reach-note reveal"><b>内容証明・支払督促・訴訟・差押えなどの法的手続きは、原則として別途着手金を申し受けます</b>（案件により、例外的に着手金無料でご提案できる場合もあります）。住民票調査や弁護士法23条照会などの調査も、弁護士だからこそ実施できます。</p>
+  </div>
+</section>
+
+<!-- DESIGN ESSAYS -->
+<section id="designs">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="top"><span class="num">03</span><span class="label">Case of Design</span></div><h2>"設計"とは、回収ルートそのものを組み直すこと。</h2><p class="lead">弁護士全員で頭をひねり、法的な構成や手段まで含めて検討する。その一例をご紹介します。</p></div>
+    <div class="essays">
+      <div class="essay reveal">
+        <div class="en">I</div>
+        <div>
+          <span class="et">1社1社の個別最適</span>
+          <h4>債権の中身から、その案件だけの回収方法を組み立てる。</h4>
+          <p>債権の内容・発生原因・相手方の属性・金額・すでに把握している情報——それらをヒントに、1社1社、最適な回収方法を探します。例えば債務者が法人であれば、代表者の住所を調査することもあります。クライアント様の債権の性質を分析・検討した結果、契約者ご本人以外への請求の拡張にも法的根拠を見出し、当該クライアント様の債権全体の回収率を底上げできた事例もございます。</p>
+        </div>
+      </div>
+      <div class="essay reveal">
+        <div class="en">II</div>
+        <div>
+          <span class="et">回収率からの逆算</span>
+          <h4>個人が相手の債権は、土日・通勤時間帯にも督促する。</h4>
+          <p>債務者が個人（toC）の債権では、平日日中の連絡だけでは相手に届きません。回収率から逆算し、土日や通勤時間帯など、相手に届きやすいタイミングを狙って架電・通知を行う——これが回収の基本施策になります。</p>
+        </div>
+      </div>
+      <div class="essay reveal">
+        <div class="en">III</div>
+        <div>
+          <span class="et">仕組みからつくる</span>
+          <h4>クライアント専用システムを開発し、支払督促を完全成功報酬で実現した。</h4>
+          <p>あるクライアント企業様向けには、業務専用システムを開発。これにより、支払督促の申立てを完全成功報酬制でお引き受けすることに成功しました。運用ごと設計するのが、私たちの流儀です。</p>
+        </div>
+      </div>
+      <div class="essay reveal">
+        <div class="en">IV</div>
+        <div>
+          <span class="et">業界ごとの最適解</span>
+          <h4>通信・サブスク・レンタル・不動産・決済。業界の数だけ、回収の型がある。</h4>
+          <p>継続的に未収金が発生する事業には、それぞれ固有の事情があります。各業界の契約形態と債権の性質を理解した上で、最適な回収アプローチを設計します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="top"><span class="num">04</span><span class="label">How We Work</span></div><h2>事業を理解し、設計し、改善し続ける。</h2><p class="lead">クライアントごとに担当弁護士と専属の体制を組み、迅速な対応とサービスの改善を常に図ります。</p></div>
+    <div class="method">
+      <div class="m reveal"><div class="mn">Step 01</div><h4>事業を理解する</h4><p>リクルート出身の代表弁護士が、貴社の事業モデル・契約形態・債権の性質を深くヒアリングし、回収を阻む真因を特定します。</p></div>
+      <div class="m reveal"><div class="mn">Step 02</div><h4>担当弁護士が設計する</h4><p>担当弁護士が、その債権に最適な法的構成と回収方法を一件ずつ設計。通知から法的手続きまで、最適な工程を組みます。</p></div>
+      <div class="m reveal"><div class="mn">Step 03</div><h4>専属体制で改善する</h4><p>クライアントごとに担当弁護士と専属の体制を配置し、データを見ながら運用を継続的に改善します。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section id="cases">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="top"><span class="num">05</span><span class="label">Results</span></div><h2>設計は、成果になって返ってくる。</h2><p class="lead">東証プライム市場上場企業を含む、事業会社様での回収率改善事例の一部です。</p></div>
+    <div class="cases">
+      <div class="case reveal">
+        <div class="cno">01</div>
+        <div class="cbody">
+          <div class="sector">不動産事業 ／ 東証上場</div>
+          <h4>調査権限と支払督促を工程化し、回収できなかった案件を動かした。</h4>
+          <dl><dt>状況</dt><dd>従前の委託先ではほとんど回収できず、回収率は約1%にとどまっていた。</dd>
+              <dt>打ち手</dt><dd>弁護士の調査権限と支払督促などの法的手続きを工程に組み込み、回収プロセスを再構築。</dd></dl>
+        </div>
+        <div class="cmetric"><div class="big">1<em> → </em>10<small>%</small></div><div class="cap">回収率を約10%近くまで改善</div></div>
+      </div>
+      <div class="case reveal">
+        <div class="cno">02</div>
+        <div class="cbody">
+          <div class="sector">通信・サブスク事業 ／ 東証プライム市場上場</div>
+          <h4>SMSの活用と定量分析で、回収オペレーションを最適化した。</h4>
+          <dl><dt>状況</dt><dd>他事務所に委託していたが、回収率が伸び悩んでいた。</dd>
+              <dt>打ち手</dt><dd>SMSの活用と定量分析により督促設計を見直し。他事務所からの切替案件。</dd></dl>
+        </div>
+        <div class="cmetric"><div class="big"><em>+</em>10<small>%</small></div><div class="cap">回収率を約10%改善</div></div>
+      </div>
+      <div class="case reveal">
+        <div class="cno">03</div>
+        <div class="cbody">
+          <div class="sector">レンタル事業 ／ 東証プライム市場上場</div>
+          <h4>法的構成を見直し、回収ルートそのものを再設計した。</h4>
+          <dl><dt>状況</dt><dd>既存の運用では回収しきれない債権が残っていた。</dd>
+              <dt>打ち手</dt><dd>法的構成を見直し、契約者以外への適法な請求・連絡を含めて回収ルートを再設計。</dd></dl>
+        </div>
+        <div class="cmetric"><div class="big"><em>+</em>2<small>%</small></div><div class="cap">回収率を約2%改善</div></div>
+      </div>
+    </div>
+    <p class="cases-note reveal">※ いずれも個別事例であり、同様の成果を保証するものではありません。守秘義務に配慮し、業種・上場区分のみ記載しています。</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="alt" id="price">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="top"><span class="num">06</span><span class="label">Fee</span></div><h2>完全成功報酬・着手金0円。切替リスクは、ほぼゼロ。</h2></div>
+    <div class="price-grid">
+      <div class="price-main reveal">
+        <span class="label">Complete Success Fee</span>
+        <div class="pv">着手金 0円 ／<br>完全成功報酬制</div>
+        <p style="color:rgba(251,248,241,.82);font-size:14px;line-height:1.9;margin:0 0 20px">完全成功報酬の対象は、次の督促業務が中心です。着手金0円・ご相談料0円。回収できた場合にのみ、報酬が発生します。</p>
+        <ul>
+          <li><span class="ck">①</span><span>架電による督促</span></li>
+          <li><span class="ck">②</span><span>一般郵便での請求書の発送</span></li>
+          <li><span class="ck">③</span><span>SMS・メール等の電子的方法による通知</span></li>
+        </ul>
+      </div>
+      <div class="price-note reveal">
+        <h4>その他の費用について（誠実なご案内）</h4>
+        <p><b style="color:var(--ink)">内容証明・支払督促・通常訴訟・差押え等の法的手続きは、原則として別途着手金を申し受けます。</b>（案件により、例外的に着手金無料でご提案できる場合もあります。）これらに伴う実費・申立費用が別途必要となる場合があります。</p>
+        <p>本サービス（完全成功報酬）は、<b style="color:var(--ink)">毎月継続的に一定額の債権回収案件が生じる事業会社様</b>に最適化されています。単発の債権回収も承りますが、その場合は原則として着手金を申し受けます。</p>
+        <p>具体的な料率・着手金はご相談時にお見積りし、費用の内訳はご依頼前に明確にご説明します。まずは債権情報をもとに無料で診断します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LETTER -->
+<section id="greet">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="top"><span class="num">07</span><span class="label">Message</span></div><h2>代表弁護士より</h2></div>
+    <div class="letter reveal">
+      <div class="letter-grid">
+        <blockquote>
+          <span class="ll">既存の運用に囚われず、弁護士全員で頭をひねる。</span>
+          継続的な債権回収業務については、従前からある程度の確立した運用がありました。しかし弊所においては、それらの既存の運用に囚われず、弁護士全員で頭をひねり、法的な構成や法的な手段まで含めて、よりアップデートできないかを常に検討しています。<br><br>
+          私は、株式会社リクルートという会社で法人営業職を担当させていただいていました。そこで、クライアント企業様のために、より何ができるかを考え抜く姿勢を、多くの先輩方から学びました。<br><br>
+          その姿勢でいまなお、クライアント企業様の債権回収やさらなる法的課題をいかに改善するか、考えに考え抜くつもりで、日夜業務に励んでいます。
+          <div class="sign">弁護士法人 東京新橋法律事務所　代表弁護士<b>前田 祥夢</b></div>
+        </blockquote>
+        <div class="pf"><img src="img/maeda.jpg" alt="代表弁護士 前田祥夢" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final" id="contact">
+  <div class="wrap">
+    <span class="label">Contact</span>
+    <h2>その未収金、<em>回収率を上げられるか</em>を診断します。</h2>
+    <p>貴社の債権情報をお預かりするだけで、いまの回収率を今より上げられるかを無料で診断します。事業会社様専門・完全成功報酬。</p>
+    <div class="cta-cards">
+      <div class="cta-card primary">
+        <span class="cc-tag">無料 ／ 債権情報をお預かりするだけ</span>
+        <h3>回収率改善可能性診断</h3>
+        <p>貴社の債権情報をもとに、回収率に改善の余地があるかどうかを、簡易的に診断します。</p>
+        <a class="act" href="#contact" data-modal="diagnosis">診断を申し込む
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="cta-card sub">
+        <span class="cc-tag">サービスのご相談</span>
+        <h3>お問い合わせ</h3>
+        <p>サービス内容のご確認、診断の前のご質問、その他のご相談は、お問い合わせフォームから承ります。</p>
+        <a class="act" href="#contact" data-modal="contact">お問い合わせフォーム
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <div class="phone">お電話でのご相談：平日 10:00–19:00 ／ <b>03-0000-0000</b></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="bt">弁護士法人 東京新橋法律事務所</div>
+        <div>東京都中央区銀座8丁目20-33 ACN銀座8ビル3階</div>
+        <div>代表弁護士　前田 祥夢（東京弁護士会所属／登録番号 60429）</div>
+      </div>
+      <div><a href="https://tslaw.or.jp/" style="color:var(--bronze2)">tslaw.or.jp</a></div>
+    </div>
+    <div class="disc">
+      ※ 本ページに記載の事例・数値・受託規模は個別の実績であり、同様の成果を保証するものではありません。債権回収の可否・回収額は、債務者の資力や債権の性質等により異なります。<br>
+      ※ 当事務所の債権回収サービスは、継続的に未収金が発生する事業会社様を対象としており、銀行・消費者金融・ファクタリング等の金融業はお引き受けしておりません。<br>
+      ※ 完全成功報酬・着手金0円の対象は、架電による督促・一般郵便での請求書の発送・SMS／メール等による通知を中心とする債権回収の受託です。内容証明・支払督促・通常訴訟・差押え等の法的手続きは、原則として別途着手金を申し受けます（案件により例外的に着手金無料となる場合もあります）。<br>
+      ※ 本サービス（完全成功報酬）は、毎月継続的に一定額の債権回収案件が生じる事業会社様向けです。単発のご依頼も承りますが、原則として着手金を申し受けます。<br>
+      ※ 費用・報酬の詳細はご相談時に個別にご説明します。法的手続きに伴う実費・申立費用等が別途必要となる場合があります。
+    </div>
+  </div>
+</footer>
+
+<div class="mcta">
+  <a href="#contact" class="m1" data-modal="diagnosis">改善可能性を診断</a>
+  <a href="#contact" class="m2" data-modal="contact">お問い合わせ</a>
+</div>
+
+<!-- ===== MODAL: お問い合わせ ===== -->
+<div class="modal-overlay" id="modal-contact" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+  <div class="modal">
+    <button class="modal-close" data-close aria-label="閉じる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="modal-head">
+      <span class="label">Contact</span>
+      <h3 id="contact-title">お問い合わせ</h3>
+      <p>サービス内容のご確認・ご相談を承ります。担当者よりご連絡いたします。</p>
+    </div>
+    <div class="modal-body">
+      <form id="form-contact" novalidate>
+        <div class="field"><label>貴社名<span class="req">必須</span></label><input type="text" name="company" required></div>
+        <div class="field"><label>ご担当者様名<span class="req">必須</span></label><input type="text" name="person" required></div>
+        <div class="field"><label>電話番号<span class="req">必須</span></label><input type="tel" name="tel" required></div>
+        <div class="field"><label>メールアドレス<span class="req">必須</span></label><input type="email" name="email" required></div>
+        <div class="field"><label>備考<span class="opt">任意</span></label><textarea name="note" placeholder="ご相談内容など"></textarea></div>
+        <div class="form-actions"><button type="submit">この内容で問い合わせる<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+        <p class="form-note">※ 送信ボタンを押すと、ご入力内容を添えたメール作成画面が開きます。</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL: 回収率改善可能性 診断 ===== -->
+<div class="modal-overlay" id="modal-diagnosis" role="dialog" aria-modal="true" aria-labelledby="diag-title">
+  <div class="modal">
+    <button class="modal-close" data-close aria-label="閉じる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="modal-head">
+      <span class="label">Free Diagnosis</span>
+      <h3 id="diag-title">回収率改善可能性 診断</h3>
+      <p>下記をご入力ください。回収率に改善の余地があるかどうかを、その場で簡易的に診断します。</p>
+    </div>
+    <div class="modal-body">
+      <form id="form-diagnosis" novalidate>
+        <div class="section-label">ご連絡先</div>
+        <div class="field"><label>貴社名<span class="req">必須</span></label><input type="text" name="company" required></div>
+        <div class="field"><label>ご担当者様名<span class="req">必須</span></label><input type="text" name="person" required></div>
+        <div class="field"><label>電話番号<span class="req">必須</span></label><input type="tel" name="tel" required></div>
+        <div class="field"><label>メールアドレス<span class="req">必須</span></label><input type="email" name="email" required></div>
+        <div class="section-label">債権について</div>
+        <div class="field"><label><span class="qn">Q1</span>債権の内容<span class="req">必須</span></label><textarea name="q1" required placeholder="例：携帯端末の分割代金、レンタル料金、サブスク利用料 など"></textarea></div>
+        <div class="field"><label><span class="qn">Q2</span>債権単価<span class="req">必須</span></label><select name="q2" required><option value="" disabled selected>選択してください</option><option value="1">5,000円未満</option><option value="2">5,001円〜10万円未満</option><option value="3">10万円以上</option></select></div>
+        <div class="field"><label><span class="qn">Q3</span>債務者の属性<span class="req">必須</span></label><select name="q3" required><option value="" disabled selected>選択してください</option><option value="個人">個人</option><option value="法人">法人</option></select></div>
+        <div class="field"><label><span class="qn">Q4</span>債務者との連絡手段（住所・電話番号・メールアドレスの把握状況）<span class="req">必須</span></label><select name="q4" required><option value="" disabled selected>選択してください</option><option value="1">すべて把握している</option><option value="2">2つ把握している</option><option value="3">1つ把握している</option><option value="4">その他</option></select></div>
+        <div class="field hidden" id="q4-other"><label>その他（具体的に）</label><input type="text" name="q4_other" placeholder="把握している連絡手段など"></div>
+        <div class="section-label">現状の督促について</div>
+        <div class="field"><label><span class="qn">Q5</span>現状の督促方法<span class="req">必須</span></label><input type="text" name="q5" required placeholder="例：弁護士に依頼している／自社で3か月督促している など"></div>
+        <div class="field"><label><span class="qn">Q6</span>現状の督促期間<span class="req">必須</span></label><select name="q6" required><option value="" disabled selected>選択してください</option><option value="1">1か月程度</option><option value="2">1か月〜半年程度</option><option value="3">半年以上</option></select></div>
+        <div class="field"><label><span class="qn">Q7</span>未収の発生件数（月あたり）<span class="req">必須</span></label><select name="q7" required><option value="" disabled selected>選択してください</option><option value="1">0〜5件</option><option value="2">6〜50件</option><option value="3">51〜300件</option><option value="4">301件以上</option></select></div>
+        <div class="form-actions"><button type="submit">診断する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+        <p class="form-note">※ 本診断は簡易的なものであり、回収可能性・回収額を保証するものではありません。</p>
+      </form>
+      <div class="result" id="diag-result">
+        <span class="badge-tier" id="diag-tier-label"></span>
+        <h4 id="diag-msg"></h4>
+        <p id="diag-sub"></p>
+        <div class="form-actions"><button type="button" id="diag-contact-btn">この診断内容でそのまま相談する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+        <div class="phone-line">お電話でのご相談：平日 10:00–19:00 ／ <b>03-0000-0000</b></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script>
+(function(){
+  var body=document.body;
+  function open(id){var m=document.getElementById('modal-'+id);if(m){m.classList.add('open');body.classList.add('modal-open');}}
+  function close(m){m.classList.remove('open');body.classList.remove('modal-open');}
+  document.querySelectorAll('[data-modal]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();open(a.getAttribute('data-modal'));});});
+  document.querySelectorAll('.modal-overlay').forEach(function(ov){
+    ov.addEventListener('click',function(e){if(e.target===ov)close(ov);});
+    ov.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',function(){close(ov);});});
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(close);});
+
+  var q4=document.querySelector('#form-diagnosis select[name=q4]');
+  if(q4){q4.addEventListener('change',function(){document.getElementById('q4-other').classList.toggle('hidden',q4.value!=='4');});}
+
+  function validate(form){var ok=true;form.querySelectorAll('[required]').forEach(function(el){if(!el.value){el.style.borderColor='#9a3b2f';ok=false;}else{el.style.borderColor='';}});return ok;}
+  function mailto(subject,lines){return 'mailto:info@tslaw.or.jp?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));}
+
+  var fc=document.getElementById('form-contact');
+  if(fc){fc.addEventListener('submit',function(e){e.preventDefault();if(!validate(fc))return;var d=new FormData(fc);var lines=['【お問い合わせ】','貴社名：'+d.get('company'),'ご担当者様名：'+d.get('person'),'電話番号：'+d.get('tel'),'メールアドレス：'+d.get('email'),'備考：'+(d.get('note')||'-')];window.location.href=mailto('債権回収サービスに関するお問い合わせ',lines);});}
+
+  var fd=document.getElementById('form-diagnosis');
+  if(fd){
+    var L={q2:{'1':'5,000円未満','2':'5,001円〜10万円未満','3':'10万円以上'},q4:{'1':'すべて把握','2':'2つ把握','3':'1つ把握','4':'その他'},q6:{'1':'1か月程度','2':'1か月〜半年程度','3':'半年以上'},q7:{'1':'0〜5件','2':'6〜50件','3':'51〜300件','4':'301件以上'}};
+    var lastLines=[];
+    fd.addEventListener('submit',function(e){
+      e.preventDefault();if(!validate(fd))return;
+      var d=new FormData(fd);var q4v=d.get('q4'),q7v=d.get('q7');
+      var tier,label,msg;
+      var q7hi=(q7v==='2'||q7v==='3'||q7v==='4');
+      var q4hi=(q4v==='1'||q4v==='2');
+      if(q7hi&&q4hi){tier='high';label='改善可能性：高';msg='回収率改善可能性が高いです。詳しくはご相談ください。';}
+      else if(q7hi){tier='mid';label='改善可能性：中';msg='回収率の改善が一定程度見込める可能性があります。詳しくご相談ください。';}
+      else{tier='low';label='改善の余地';msg='回収率の改善の余地があるかも知れません。詳しくはご相談ください。';}
+      lastLines=['【回収率改善可能性 診断】','■ 診断結果：'+msg,'','貴社名：'+d.get('company'),'ご担当者様名：'+d.get('person'),'電話番号：'+d.get('tel'),'メールアドレス：'+d.get('email'),'','Q1 債権の内容：'+d.get('q1'),'Q2 債権単価：'+L.q2[d.get('q2')],'Q3 債務者の属性：'+d.get('q3'),'Q4 連絡手段の把握：'+L.q4[d.get('q4')]+(d.get('q4')==='4'?'（'+(d.get('q4_other')||'')+'）':''),'Q5 現状の督促方法：'+d.get('q5'),'Q6 現状の督促期間：'+L.q6[d.get('q6')],'Q7 未収発生件数/月：'+L.q7[d.get('q7')]];
+      var r=document.getElementById('diag-result');
+      r.className='result show '+tier;
+      document.getElementById('diag-tier-label').textContent=label;
+      document.getElementById('diag-msg').textContent=msg;
+      document.getElementById('diag-sub').textContent='より精緻な見立てと回収方法のご提案は、担当弁護士が個別に行います。下記より、この診断内容を添えてそのままご相談いただけます。';
+      fd.style.display='none';
+      document.querySelector('#modal-diagnosis .modal-body').scrollTop=0;
+      r.scrollIntoView({block:'nearest'});
+    });
+    var dcb=document.getElementById('diag-contact-btn');
+    if(dcb){dcb.addEventListener('click',function(){window.location.href=mailto('回収率改善可能性診断のご相談',lastLines);});}
+  }
+})();
+</script>
+</body>
+</html>

@@ -678,13 +678,6 @@ body.modal-open{overflow:hidden}
         <div class="form-actions"><button type="submit">診断する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
         <p class="form-note">※ 本診断は簡易的なものであり、回収可能性・回収額を保証するものではありません。</p>
       </form>
-      <div class="result" id="diag-result">
-        <span class="badge-tier" id="diag-tier-label"></span>
-        <h4 id="diag-msg"></h4>
-        <p id="diag-sub"></p>
-        <div class="form-actions"><button type="button" id="diag-contact-btn">この診断内容でそのまま相談する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
-        <div class="phone-line">お電話でのご相談：平日 10:00–19:00 ／ <b>03-0000-0000</b></div>
-      </div>
     </div>
   </div>
 </div>
@@ -717,7 +710,6 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   var fd=document.getElementById('form-diagnosis');
   if(fd){
     var L={q2:{'1':'5,000円未満','2':'5,001円〜10万円未満','3':'10万円以上'},q4:{'1':'すべて把握','2':'2つ把握','3':'1つ把握','4':'その他'},q6:{'1':'1か月程度','2':'1か月〜半年程度','3':'半年以上'},q7:{'1':'0〜5件','2':'6〜50件','3':'51〜300件','4':'301件以上'}};
-    var lastLines=[];
     fd.addEventListener('submit',function(e){
       e.preventDefault();if(!validate(fd))return;
       var d=new FormData(fd);var q4v=d.get('q4'),q7v=d.get('q7');
@@ -726,19 +718,11 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
       var q4hi=(q4v==='1'||q4v==='2');
       if(q7hi&&q4hi){tier='high';label='改善可能性：高';msg='回収率改善可能性が高いです。詳しくはご相談ください。';}
       else if(q7hi){tier='mid';label='改善可能性：中';msg='回収率の改善が一定程度見込める可能性があります。詳しくご相談ください。';}
-      else{tier='low';label='改善の余地';msg='回収率の改善の余地があるかも知れません。詳しくはご相談ください。';}
-      lastLines=['【回収率改善可能性 診断】','■ 診断結果：'+msg,'','貴社名：'+d.get('company'),'ご担当者様名：'+d.get('person'),'電話番号：'+d.get('tel'),'メールアドレス：'+d.get('email'),'','Q1 債権の内容：'+d.get('q1'),'Q2 債権単価：'+L.q2[d.get('q2')],'Q3 債務者の属性：'+d.get('q3'),'Q4 連絡手段の把握：'+L.q4[d.get('q4')]+(d.get('q4')==='4'?'（'+(d.get('q4_other')||'')+'）':''),'Q5 現状の督促方法：'+d.get('q5'),'Q6 現状の督促期間：'+L.q6[d.get('q6')],'Q7 未収発生件数/月：'+L.q7[d.get('q7')]];
-      var r=document.getElementById('diag-result');
-      r.className='result show '+tier;
-      document.getElementById('diag-tier-label').textContent=label;
-      document.getElementById('diag-msg').textContent=msg;
-      document.getElementById('diag-sub').textContent='より精緻な見立てと回収方法のご提案は、担当弁護士が個別に行います。下記より、この診断内容を添えてそのままご相談いただけます。';
-      fd.style.display='none';
-      document.querySelector('#modal-diagnosis .modal-body').scrollTop=0;
-      r.scrollIntoView({block:'nearest'});
+      else{tier='low';label='改善可能性：中〜低';msg='回収率の改善の余地があるかも知れません。詳しくはご相談ください。';}
+      var ans={company:d.get('company'),person:d.get('person'),tel:d.get('tel'),email:d.get('email'),q1:d.get('q1'),q2:L.q2[d.get('q2')],q3:d.get('q3'),q4:L.q4[d.get('q4')]+(d.get('q4')==='4'?'（'+(d.get('q4_other')||'')+'）':''),q5:d.get('q5'),q6:L.q6[d.get('q6')],q7:L.q7[d.get('q7')]};
+      try{sessionStorage.setItem('diagResult',JSON.stringify({tier:tier,label:label,msg:msg,ans:ans}));}catch(err){}
+      window.location.href='result.html';
     });
-    var dcb=document.getElementById('diag-contact-btn');
-    if(dcb){dcb.addEventListener('click',function(){window.location.href=mailto('回収率改善可能性診断のご相談',lastLines);});}
   }
 })();
 </script>
